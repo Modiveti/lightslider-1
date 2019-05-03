@@ -370,11 +370,12 @@
                             }
                         }
                         var thumb = $children.eq(i * settings.slideMove).attr('data-thumb');
+                        var thumbAlt = $children.eq(i * settings.slideMove).attr('data-thumb-alt');
                         if (settings.gallery === true) {
-                            pagers += '<li style="width:100%;' + gutter + ':' + settings.thumbMargin + 'px"><a href="#"><img src="' + thumb + '" /></a></li>';
+                            pagers += '<li style="width:100%;' + gutter + ':' + settings.thumbMargin + 'px"><a href="#"><img src="' + thumb + '" alt="' + data-thumb-alt + '" /></a></li>';
                         } else {
                             pagers += '<li><a href="#">' + (i + 1) + '</a></li>';
-                        }
+                        }  
                         if (settings.mode === 'slide') {
                             if ((v) >= w - elSize - settings.slideMargin) {
                                 i = i + 1;
